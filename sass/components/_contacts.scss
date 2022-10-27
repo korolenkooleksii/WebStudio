@@ -1,13 +1,12 @@
 .contacts {
-  @media screen and (min-width: 1600px) {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    gap: 50px;
-  }
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 50px;
 }
 
 .contacts__link {
+  @extend %flexcenter;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
@@ -16,8 +15,6 @@
   letter-spacing: 0.02em;
   color: $secondary-text-color;
   transition: color $timing-function;
-  @extend %flexcenter;
-
   &:hover,
   &:focus {
     color: $accent-color;

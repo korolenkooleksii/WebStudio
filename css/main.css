@@ -56,24 +56,10 @@ body {
 }
 
 .container {
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-}
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-}
-@media screen and (min-width: 1300px) {
-  .container {
-    width: 1300px;
-  }
 }
 
 .logo {
@@ -100,28 +86,20 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-@media screen and (min-width: 1600px) {
-  .header__container {
-    display: flex;
-  }
+.header__container {
+  display: flex;
 }
 
-@media screen and (min-width: 1600px) {
-  .header__nav-wrap {
-    display: flex;
-    align-items: center;
-  }
+.header__nav-wrap {
+  display: flex;
+  align-items: center;
 }
 
 .navigation {
+  display: flex;
+  align-items: center;
   margin-left: 93px;
-}
-@media screen and (min-width: 1600px) {
-  .navigation {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-  }
+  gap: 50px;
 }
 
 .navigation__link {
@@ -155,13 +133,11 @@ body {
   border-radius: 2px;
 }
 
-@media screen and (min-width: 1600px) {
-  .contacts {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    gap: 50px;
-  }
+.contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 50px;
 }
 
 .contacts__link {
