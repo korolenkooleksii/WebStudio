@@ -6,20 +6,46 @@ $box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 }
 
 .employees-list {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .employees-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .employees-list__item {
-  flex-basis: calc((100% - 90px) / 4);
   background: $primary-white-color;
   border-radius: 0px 0px 4px 4px;
   box-shadow: $box-shadow;
+
+  @media screen and (min-width: 480px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 .employees-list__content {
   padding-top: 30px;
+  padding-bottom: 24px;
 }
 
 .employees-list__name {
@@ -44,4 +70,3 @@ $box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
   color: $primary-brd-color;
   transition: background-color $timing-function, color $timing-function;
 }
-

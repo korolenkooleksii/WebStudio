@@ -3,19 +3,38 @@
 }
 
 .feature-list {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
 }
 
+
 .feature-list__item {
-  flex-basis: calc((100% - 90px) / 4);
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 .feature-list__thumb {
-  @extend %flexcenter;
-  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  height: 120px;
   margin-bottom: 30px;
   background: $primary-bgr-color;
   border-radius: 4px;

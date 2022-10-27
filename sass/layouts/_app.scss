@@ -1,16 +1,26 @@
 $app-bgr-color: rgba(47, 48, 58, 0.8);
 
-.app-list {
+.app {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.app__list {
   display: flex;
   justify-content: center;
   gap: 30px;
 }
 
-.app-list__item {
+.app__item {
   flex-basis: calc((100% - 60px) / 3);
 }
 
-.app-list__product {
+.app__product {
   position: relative;
   &::before {
     content: "";
@@ -23,7 +33,7 @@ $app-bgr-color: rgba(47, 48, 58, 0.8);
   }
 }
 
-.app-list__text {
+.app__name {
   position: absolute;
   left: 50%;
   bottom: 27px;

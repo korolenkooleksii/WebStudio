@@ -1,15 +1,37 @@
 .section {
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 94px;
-  padding-bottom: 94px;
+
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section__heading {
-  font-size: 36px;
-  line-height: 1.17;
   letter-spacing: 0.03em;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 28px;
+    line-height: 1.18;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.17;
+  }
+
   &--bottom {
-    margin-bottom: 50px;
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
   }
 }
