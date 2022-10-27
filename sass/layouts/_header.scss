@@ -5,12 +5,17 @@ $header-brd-color: #ececec;
 }
 
 .header__container {
-  display: flex;
+  @media screen and (min-width: 1600px) {
+    display: flex;
+  }
+  
 }
 
 .header__nav-wrap {
+  @media screen and (min-width: 1600px) {
   display: flex;
   align-items: center;
+  }
 }
 
 
