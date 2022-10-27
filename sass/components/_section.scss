@@ -1,0 +1,15 @@
+.section {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section__heading {
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  &--bottom {
+    margin-bottom: 50px;
+  }
+}

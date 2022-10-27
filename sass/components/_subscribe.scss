@@ -1,0 +1,32 @@
+$subscribe-text-color: rgba(255, 255, 255, 0.6);
+$subscribe-border-color: rgba(255, 255, 255, 0.3);
+
+.subscribe {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.subscribe__input {
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: $subscribe-text-color;
+  padding: 15px 16px;
+  background-color: transparent;
+  min-width: 358px;
+  height: 50px;
+  border: 1px solid $subscribe-border-color;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: transparent;
+}
+
+.subscribe__button {
+  @extend %flexcenter;
+  gap: 10px;
+}
+
+.subscribe__icon {
+  fill: currentColor;
+}

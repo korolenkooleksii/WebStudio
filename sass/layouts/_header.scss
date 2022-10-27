@@ -1,0 +1,16 @@
+$header-brd-color: #ececec;
+
+.header {
+  border-bottom: 1px solid $header-brd-color;
+}
+
+.header__container {
+  display: flex;
+}
+
+.header__nav-wrap {
+  display: flex;
+  align-items: center;
+}
+
+

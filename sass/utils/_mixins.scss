@@ -1,0 +1,7 @@
+@mixin bordered($color: rgba(33, 33, 33, 0.2)) {
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color;
+}
+
+/// @include bordered () ///

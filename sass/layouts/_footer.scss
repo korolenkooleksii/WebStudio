@@ -1,0 +1,41 @@
+$footer-bgr-social-link-color: rgba(255, 255, 255, 0.1);
+
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $secondary-bgr-color;
+}
+
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer__wrap-address {
+  margin-top: 20px;
+}
+
+.footer__wrap-social {
+  margin-left: 70px;
+}
+
+.footer__wrap-subscribe {
+  margin-left: auto;
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.42;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $primary-white-color;
+  margin-bottom: 20px;
+}
+
+.footer__social-link {
+  background-color: $footer-bgr-social-link-color;
+  color: $primary-white-color;
+  transition: background-color $timing-function;
+}
