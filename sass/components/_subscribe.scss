@@ -9,16 +9,12 @@ $subscribe-border-color: rgba(255, 255, 255, 0.3);
   }
 }
 
-//   margin-top: 20px;
-//
-
 .subscribe__input {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: $subscribe-text-color;
   padding: 15px 16px;
   background-color: transparent;
-
   height: 50px;
   border: 1px solid $subscribe-border-color;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
