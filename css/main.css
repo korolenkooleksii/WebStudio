@@ -751,12 +751,12 @@ body {
     flex-basis: calc((100% - 60px) / 3);
   }
 }
-
 @media screen and (max-width: 767px) {
-  .portfolio-set__item:not(:last-child) {
+  .portfolio-set__item :not(:last-child) {
     margin-bottom: 30px;
   }
 }
+
 .portfolio-set__link {
   display: block;
   width: 100%;

@@ -36,11 +36,11 @@ $portfolio-bgr-color: rgba(33, 150, 243, 0.9);
   @media screen and (min-width: 1200px) {
     flex-basis: calc((100% - 60px) / 3);
   }
-}
 
-@media screen and (max-width: 767px) {
-  .portfolio-set__item:not(:last-child) {
-    margin-bottom: 30px;
+  & :not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
   }
 }
 
