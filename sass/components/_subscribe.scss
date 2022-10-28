@@ -2,11 +2,15 @@ $subscribe-text-color: rgba(255, 255, 255, 0.6);
 $subscribe-border-color: rgba(255, 255, 255, 0.3);
 
 .subscribe {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 20px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
 }
+
+//   margin-top: 20px;
+//
 
 .subscribe__input {
   line-height: 1.25;
@@ -14,17 +18,32 @@ $subscribe-border-color: rgba(255, 255, 255, 0.3);
   color: $subscribe-text-color;
   padding: 15px 16px;
   background-color: transparent;
-  min-width: 358px;
+
   height: 50px;
   border: 1px solid $subscribe-border-color;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   outline: transparent;
+
+  @media screen and (max-width: 1199px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 358px;
+  }
 }
 
 .subscribe__button {
-  @extend %flexcenter;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
+
+  @media screen and (max-width: 1199px) {
+    margin: 0 auto;
+  }
 }
 
 .subscribe__icon {
