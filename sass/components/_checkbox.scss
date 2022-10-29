@@ -14,7 +14,7 @@
 
 .checkbox__icon {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 0;
   fill: $primary-text-color;
   transform: translateY(-50%);
@@ -30,6 +30,14 @@
   }
   .checkbox__input:focus + & {
     fill: $accent-color;
+  }
+
+  @media screen and (max-width: 1199px) {
+    top: 27%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    top: 40%;
   }
 }
 
