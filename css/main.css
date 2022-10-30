@@ -59,6 +59,33 @@ body {
   }
 }
 
+.container {
+  outline: solid 1px red;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    position: relative;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .navigation {
     margin-bottom: 302px;
@@ -215,7 +242,8 @@ body {
   fill: #2196f3;
 }
 
-.icon-clos, .icon-menu {
+.icon-close,
+.icon-menu {
   fill: currentColor;
 }
 
@@ -227,7 +255,7 @@ body {
   display: none;
   padding: 48px 40px;
   width: 100%;
-  height: auto;
+  height: 100%;
   background-color: #ffffff;
 }
 
@@ -239,31 +267,59 @@ body {
   display: none;
 }
 
-.container {
-  outline: solid 1px red;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
+.social-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
+
+.social-list--textual {
+  justify-content: start;
 }
-@media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
+
+.social-list__item--textual:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
-@media screen and (min-width: 1200px) {
-  .container {
-    width: 1200px;
-  }
+
+.social-list__link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-@media screen and (max-width: 767px) {
-  .container {
-    position: relative;
-  }
+.social-list__link:hover, .social-list__link:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+.social-list__link--textual {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  display: inline-block;
+}
+.social-list__link--textual:hover, .social-list__link--textual:focus {
+  background-color: transparent;
+  color: #2196f3;
+}
+
+.social-list__icon {
+  fill: currentColor;
+}
+
+.social-list__icon--none {
+  display: none;
+}
+
+.social-list__name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196f3;
 }
 
 .logo {
@@ -772,29 +828,6 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
-}
-
-.social-list {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-.social-list__link {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.social-list__link:hover, .social-list__link:focus {
-  background-color: #2196f3;
-  color: #ffffff;
-}
-
-.social-list__icon {
-  fill: currentColor;
 }
 
 .team {

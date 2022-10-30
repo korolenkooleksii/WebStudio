@@ -5,11 +5,12 @@
 
 @import './components/body';
 @import './layouts/header';
+@import './components/container';
 @import './components/navigation';
 @import './components/contacts';
 @import './layouts/toggle-container';
+@import './components/social-list';
 
-@import './components/container';
 @import './components/logo';
 @import './components/button';
 @import './layouts/hero';
@@ -19,15 +20,11 @@
 @import './components/checkbox';
 
 
-
-
-
-
 @import './components/centering';
 @import './components/section';
 @import './layouts/feature';
 @import './layouts/app';
-@import './components/social-list';
+
 @import './layouts/team';
 @import './layouts/clients-list';
 @import './layouts/footer';

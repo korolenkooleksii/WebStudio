@@ -4,6 +4,17 @@
   justify-content: center;
 }
 
+.social-list--textual {
+  justify-content: start;
+}
+
+.social-list__item--textual {
+  &:not(:last-child) {
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+
 .social-list__link {
   width: 44px;
   height: 44px;
@@ -18,6 +29,31 @@
   }
 }
 
+.social-list__link--textual {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  display: inline-block;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $accent-color;
+  }
+}
+
 .social-list__icon {
   fill: currentColor;
+}
+
+.social-list__icon--none {
+  display: none;
+}
+
+.social-list__name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: $accent-color;
 }
