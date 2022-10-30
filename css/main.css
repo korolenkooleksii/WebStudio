@@ -53,6 +53,192 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
+@media screen and (max-width: 767px) {
+  .header__container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    margin-bottom: 302px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+    align-items: center;
+    margin-left: 93px;
+    gap: 50px;
+  }
+}
+
+.navigation__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #212121;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navigation__link:hover, .navigation__link:focus {
+  color: #2196f3;
+}
+@media screen and (max-width: 767px) {
+  .navigation__link {
+    font-size: 40px;
+    line-height: 1.18;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigation__link {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+.navigation__link--current {
+  color: #2196f3;
+}
+@media screen and (min-width: 768px) {
+  .navigation__link--current {
+    position: relative;
+  }
+  .navigation__link--current::after {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: -1px;
+    right: 0;
+    background-color: #2196f3;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+  }
+}
+
+.navigation__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+@media screen and (max-width: 767px) {
+  .contacts {
+    display: inline-block;
+    margin-bottom: 62px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 50px;
+  }
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts__link:hover, .contacts__link:focus {
+  color: #2196f3;
+}
+@media screen and (min-width: 768px) {
+  .contacts__link {
+    justify-content: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts__link--mobile {
+    font-size: 34px;
+    line-height: 1.18;
+    margin-bottom: 32px;
+    color: #2196f3;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts__link--mail {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+}
+
+.contacts__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+@media screen and (max-width: 767px) {
+  .contacts__icon {
+    display: none;
+  }
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+}
+@media screen and (min-width: 768px) {
+  .toggle-container {
+    display: none;
+  }
+}
+.toggle-container:hover .icon-menu, .toggle-container:focus .icon-menu {
+  fill: #2196f3;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+.menu-toggle:hover .icon-close, .menu-toggle:focus .icon-close {
+  fill: #2196f3;
+}
+
+.icon-clos, .icon-menu {
+  fill: currentColor;
+}
+
+.menu-container {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: none;
+  padding: 48px 40px;
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+}
+
+.menu-container.is-open {
+  display: block;
+}
+
+.menu-container.is-open + .toggle-container {
+  display: none;
+}
+
 .container {
   outline: solid 1px red;
   padding-left: 15px;
@@ -74,15 +260,30 @@ body {
     width: 1200px;
   }
 }
+@media screen and (max-width: 767px) {
+  .container {
+    position: relative;
+  }
+}
 
 .logo {
-  padding-top: 20px;
-  padding-bottom: 20px;
   color: #2196f3;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-style: normal;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 480px) {
+  .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 @media screen and (max-width: 1199px) {
   .logo {
@@ -218,10 +419,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
+  transition: transform 500ms ease-in-out;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition: transform 500ms ease-in-out;
   padding: 40px;
 }
 .backdrop.is-hidden .modal {
@@ -383,11 +584,20 @@ body {
 
 .checkbox__icon {
   position: absolute;
-  top: 40%;
   left: 0;
   fill: #212121;
   transform: translateY(-50%);
   transition: fill var(--timing-function), background-color var(--timing-function), background-image var(--timing-function);
+}
+@media screen and (max-width: 1199px) {
+  .checkbox__icon {
+    top: 27%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__icon {
+    top: 42%;
+  }
 }
 .checkbox__input:checked + .checkbox__icon {
   fill: #2196f3;
@@ -398,16 +608,6 @@ body {
 }
 .checkbox__input:focus + .checkbox__icon {
   fill: #2196f3;
-}
-@media screen and (max-width: 1199px) {
-  .checkbox__icon {
-    top: 27%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .checkbox__icon {
-    top: 40%;
-  }
 }
 
 .checkbox__text {

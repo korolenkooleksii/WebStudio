@@ -3,3 +3,9 @@ $header-brd-color: #ececec;
 .header {
   border-bottom: 1px solid $header-brd-color;
 }
+
+.header__container {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
