@@ -1,0 +1,8 @@
+.nav-mobile {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  .menu-container.is-open & {
+    display: block;
+  }
+}

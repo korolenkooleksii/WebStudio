@@ -28,6 +28,7 @@
 .menu-container {
   position: absolute;
   overflow-y: scroll;
+  z-index: 1;
   top: 0;
   left: 0;
   display: none;

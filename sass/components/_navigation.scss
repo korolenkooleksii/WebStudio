@@ -5,16 +5,21 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-left: 93px;
+    margin-left: 88px;
     gap: 50px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+    gap: 53px;
   }
 }
 
 .navigation__link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+
   font-weight: 500;
   letter-spacing: 0.02em;
   color: $primary-text-color;
@@ -33,6 +38,11 @@
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 1.14;
+    padding: 31px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 32px 0;
   }
 }
 
@@ -56,5 +66,7 @@
 }
 
 .navigation__item:not(:last-child) {
-  margin-bottom: 32px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+  }
 }

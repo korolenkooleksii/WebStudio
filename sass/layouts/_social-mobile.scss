@@ -1,0 +1,21 @@
+.social-mobile {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+  width: 357px;
+}
+
+.social-mobile__item:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.social-mobile__link {
+  width: auto;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+  cursor: pointer;
+}
