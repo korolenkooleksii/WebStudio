@@ -6,13 +6,15 @@
 
 .social-list--textual {
   justify-content: start;
+
+  @media screen and (max-width: 767px) {
+    width: 356px;
+  }
 }
 
-.social-list__item--textual {
-  &:not(:last-child) {
-    padding-right: 10px;
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
-  }
+.social-list__item--textual:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .social-list__link {
