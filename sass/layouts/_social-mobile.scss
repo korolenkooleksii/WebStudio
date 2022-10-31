@@ -1,8 +1,9 @@
 .social-mobile {
-  display: flex;
+  display: inline-flex;
+  flex-wrap: wrap;
   gap: 10px;
   justify-content: start;
-  width: 357px;
+  width: auto;
 }
 
 .social-mobile__item:not(:last-child) {
@@ -11,6 +12,7 @@
 }
 
 .social-mobile__link {
+
   width: auto;
   font-weight: 500;
   font-size: 18px;
