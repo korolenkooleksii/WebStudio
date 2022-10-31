@@ -1,35 +1,34 @@
 @import "./base/reset";
 @import "./utils/variables";
-@import './utils/visually-hidden';
-@import './utils/mixins';
+@import "./utils/visually-hidden";
+@import "./utils/mixins";
 
-@import './components/body';
-@import './layouts/header';
-@import './components/container';
-@import './components/navigation';
-@import './components/contacts';
-@import './layouts/toggle-container';
-@import './components/social-list';
+@import "./components/body";
+@import "./layouts/header";
+@import "./components/container";
+@import "./components/navigation";
+@import "./layouts/toggle-container";
+@import "./components/contacts";
 
-@import './components/logo';
-@import './components/button';
-@import './layouts/hero';
-@import './components/backdrop';
-@import './layouts/modal';
-@import './components/form';
-@import './components/checkbox';
+@import "./components/social-list";
 
+@import "./components/logo";
+@import "./components/button";
+@import "./layouts/hero";
+@import "./components/backdrop";
+@import "./layouts/modal";
+@import "./components/form";
+@import "./components/checkbox";
 
-@import './components/centering';
-@import './components/section';
-@import './layouts/feature';
-@import './layouts/app';
+@import "./components/centering";
+@import "./components/section";
+@import "./layouts/feature";
+@import "./layouts/app";
 
-@import './layouts/team';
-@import './layouts/clients-list';
-@import './layouts/footer';
-@import './components/address';
-@import './components/subscribe';
-@import './layouts/filters-list';
-@import './layouts/portfolio-set';
-
+@import "./layouts/team";
+@import "./layouts/clients-list";
+@import "./layouts/footer";
+@import "./components/address";
+@import "./components/subscribe";
+@import "./layouts/filters-list";
+@import "./layouts/portfolio-set";
