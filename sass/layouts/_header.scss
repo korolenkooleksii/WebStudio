@@ -2,16 +2,15 @@ $header-brd-color: #ececec;
 
 .header {
   border-bottom: 1px solid $header-brd-color;
+  @media screen and (max-width: 767px) {
+    position: relative;
+  }
 }
 
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @media screen and (max-width: 767px) {
-    position: relative;
-  }
 }
 
 .header__nav-wrap {

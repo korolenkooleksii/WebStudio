@@ -1,15 +1,11 @@
 .clients-list {
-  @media screen and (max-width: 1199px) {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
- 
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
   @media screen and (min-width: 1200px) {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+    flex-wrap: nowrap;
   }
 }
 

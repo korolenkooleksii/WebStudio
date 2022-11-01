@@ -11,6 +11,10 @@ $backdrop-bgr-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity $backdrop-timing, visibility $backdrop-timing;
   overflow-y: scroll;
+
+  @media screen and (max-width: 479px) {
+    padding: 93px 15px;
+  }
 }
 
 .backdrop.is-hidden {

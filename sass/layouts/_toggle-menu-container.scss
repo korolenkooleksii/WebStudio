@@ -26,15 +26,13 @@
 
 .menu-container {
   position: absolute;
-  overflow-y: scroll;
-  z-index: 1;
+  z-index: 5;
   top: 0;
   left: 0;
   display: none;
   padding: 48px 40px;
   width: 100%;
-  max-width: 480px;
-  max-height: 796px;
+  height: 796px;
   background-color: $primary-white-color;
   outline: 2px solid blue;
 }

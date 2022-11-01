@@ -14,20 +14,13 @@
 
 .checkbox__icon {
   position: absolute;
+  top: 10px;
   left: 0;
   fill: $primary-text-color;
   transform: translateY(-50%);
   transition: fill var(--timing-function),
     background-color var(--timing-function),
     background-image var(--timing-function);
-
-  @media screen  and (max-width: 1199px) {
-    top: 27%
-  } 
-  
-  @media screen  and (min-width: 1200px) {
-    top: 42%
-  }
 
   .checkbox__input:checked + & {
     fill: $accent-color;
@@ -36,6 +29,7 @@
     background-size: contain;
     background-origin: border-box;
   }
+  
   .checkbox__input:focus + & {
     fill: $accent-color;
   }

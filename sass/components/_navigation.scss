@@ -19,8 +19,10 @@
 
 .navigation__link {
   display: block;
-
   font-weight: 500;
+  font-size: 36px;
+  line-height: 1.18;
+    padding: 0;
   letter-spacing: 0.02em;
   color: $primary-text-color;
   transition: color $timing-function;
@@ -29,10 +31,8 @@
     color: $accent-color;
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 480px) {
     font-size: 40px;
-    line-height: 1.18;
-    padding: 0;
   }
 
   @media screen and (min-width: 768px) {

@@ -26,7 +26,7 @@ a {
 img {
   display: block;
   height: auto;
-  max-height: 100%;
+  max-width: 100%;
 }
 
 .visually-hidden {
@@ -52,16 +52,16 @@ body {
 .header {
   border-bottom: 1px solid #ececec;
 }
+@media screen and (max-width: 767px) {
+  .header {
+    position: relative;
+  }
+}
 
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-@media screen and (max-width: 767px) {
-  .header__container {
-    position: relative;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -79,6 +79,7 @@ body {
 
 .container {
   outline: solid 1px red;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -123,6 +124,9 @@ body {
 .navigation__link {
   display: block;
   font-weight: 500;
+  font-size: 36px;
+  line-height: 1.18;
+  padding: 0;
   letter-spacing: 0.02em;
   color: #212121;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -130,11 +134,9 @@ body {
 .navigation__link:hover, .navigation__link:focus {
   color: #2196f3;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) {
   .navigation__link {
     font-size: 40px;
-    line-height: 1.18;
-    padding: 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -204,15 +206,13 @@ body {
 
 .menu-container {
   position: absolute;
-  overflow-y: scroll;
-  z-index: 1;
+  z-index: 5;
   top: 0;
   left: 0;
   display: none;
   padding: 48px 40px;
   width: 100%;
-  max-width: 480px;
-  max-height: 796px;
+  height: 796px;
   background-color: #ffffff;
   outline: 2px solid blue;
 }
@@ -284,14 +284,24 @@ body {
 }
 
 .contacts__link--mobile {
-  font-size: 34px;
+  font-size: 28px;
   line-height: 1.18;
   color: #2196f3;
 }
+@media screen and (min-width: 480px) {
+  .contacts__link--mobile {
+    font-size: 34px;
+  }
+}
 
 .contacts__link--mail {
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.17;
+}
+@media screen and (min-width: 480px) {
+  .contacts__link--mail {
+    font-size: 24px;
+  }
 }
 
 .contacts__icon {
@@ -541,6 +551,11 @@ body {
   transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
   overflow-y: scroll;
 }
+@media screen and (max-width: 479px) {
+  .backdrop {
+    padding: 93px 15px;
+  }
+}
 
 .backdrop.is-hidden {
   opacity: 0;
@@ -549,15 +564,27 @@ body {
 }
 
 .modal {
-  position: absolute;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
 }
 
+@media screen and (max-width: 479px) {
+  .modal {
+    position: relative;
+    transform: scale(1);
+    transition: transform 500ms ease-in-out;
+    max-width: 450px;
+    max-height: 609px;
+  }
+  .backdrop.is-hidden .modal {
+    transform: scale(1.2);
+  }
+}
 @media screen and (min-width: 480px) {
   .modal {
+    position: absolute;
     top: 93px;
     left: 50%;
     transform: translateX(-50%) scale(1);
@@ -571,6 +598,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .modal {
+    position: absolute;
     top: 208px;
     left: 50%;
     transform: translateX(-50%) scale(1);
@@ -584,6 +612,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .modal {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
@@ -732,20 +761,11 @@ body {
 
 .checkbox__icon {
   position: absolute;
+  top: 10px;
   left: 0;
   fill: #212121;
   transform: translateY(-50%);
   transition: fill var(--timing-function), background-color var(--timing-function), background-image var(--timing-function);
-}
-@media screen and (max-width: 1199px) {
-  .checkbox__icon {
-    top: 27%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .checkbox__icon {
-    top: 42%;
-  }
 }
 .checkbox__input:checked + .checkbox__icon {
   fill: #2196f3;
@@ -875,10 +895,8 @@ body {
   color: #757575;
 }
 
-@media screen and (max-width: 1199px) {
-  .app {
-    display: none;
-  }
+.app {
+  display: none;
 }
 @media screen and (min-width: 1200px) {
   .app {
@@ -995,19 +1013,15 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-width: 1199px) {
-  .clients-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
+.clients-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 @media screen and (min-width: 1200px) {
   .clients-list {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+    flex-wrap: nowrap;
   }
 }
 
@@ -1134,10 +1148,8 @@ body {
   margin-top: 20px;
 }
 
-@media screen and (max-width: 1199px) {
-  .address__item:not(:last-child) {
-    margin-bottom: 8px;
-  }
+.address__item:not(:last-child) {
+  margin-bottom: 8px;
 }
 @media screen and (min-width: 1200px) {
   .address__item:not(:last-child) {
@@ -1212,29 +1224,25 @@ body {
   fill: currentColor;
 }
 
-@media screen and (max-width: 767px) {
-  .filters-list {
-    margin-right: auto;
-    max-width: 326px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 40px;
-  }
+.filters-list {
+  max-width: 326px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+  margin-right: auto;
 }
 @media screen and (min-width: 768px) {
   .filters-list {
-    display: flex;
+    max-width: 576px;
     justify-content: center;
-    gap: 8px;
     margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 @media screen and (min-width: 1200px) {
   .filters-list {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
     margin-bottom: 50px;
   }
 }
