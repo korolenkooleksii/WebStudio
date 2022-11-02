@@ -1,6 +1,7 @@
 .toggle-container {
   width: auto;
   height: 60px;
+  position: relative;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -8,9 +9,12 @@
 }
 
 .menu-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 0;
   display: flex;
   justify-content: center;
-  padding: 10px 0;
   border: 0;
   background-color: transparent;
   &:focus .icon-menu,
@@ -24,24 +28,21 @@
   fill: currentColor;
 }
 
+.js-close-menu {
+  right: 15px;
+}
+
 .menu-container {
-  position: absolute;
+  position: fixed;
   z-index: 5;
   top: 0;
   left: 0;
   display: none;
   padding: 48px 40px;
   width: 100%;
-  height: 796px;
+  height: 100vh;
   background-color: $primary-white-color;
   outline: 2px solid blue;
-}
-
-.js-close-menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 10px;
 }
 
 .menu-container.is-open {
