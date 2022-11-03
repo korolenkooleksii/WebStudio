@@ -1,14 +1,8 @@
-.feature {
-  padding-bottom: 0;
-}
-
 .feature-list {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -16,7 +10,6 @@
     gap: 30px;
   }
 }
-
 
 .feature-list__item {
   @media screen and (min-width: 768px) {
