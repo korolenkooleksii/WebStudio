@@ -49,9 +49,6 @@ body {
   color: #212121;
 }
 
-.header {
-  border-bottom: 1px solid #ececec;
-}
 @media screen and (max-width: 767px) {
   .header {
     position: relative;
@@ -62,6 +59,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #ececec;
 }
 
 @media screen and (max-width: 767px) {
