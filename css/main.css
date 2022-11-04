@@ -97,6 +97,11 @@ body {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .navigation {
+    margin-bottom: 50px;
+  }
+}
 @media screen and (min-width: 768px) {
   .navigation {
     display: flex;
@@ -276,7 +281,7 @@ body {
 }
 
 .contacts__link--mobile {
-  font-size: 28px;
+  font-size: 26px;
   line-height: 1.18;
   color: #2196f3;
 }
@@ -332,6 +337,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: auto;
 }
 
 .social-list {
