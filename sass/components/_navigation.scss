@@ -14,6 +14,13 @@
   }
 }
 
+
+.navigation__item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+  }
+}
+
 .navigation__link {
   display: block;
   font-weight: 500;
@@ -59,11 +66,5 @@
       height: 4px;
       border-radius: 2px;
     }
-  }
-}
-
-.navigation__item:not(:last-child) {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 32px;
   }
 }

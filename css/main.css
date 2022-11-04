@@ -113,6 +113,12 @@ body {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .navigation__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
 .navigation__link {
   display: block;
   font-weight: 500;
@@ -161,12 +167,6 @@ body {
     width: 100%;
     height: 4px;
     border-radius: 2px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .navigation__item:not(:last-child) {
-    margin-bottom: 32px;
   }
 }
 
@@ -315,6 +315,9 @@ body {
   }
 }
 
+.nav-mobile {
+  height: 100%;
+}
 @media screen and (max-width: 767px) {
   .nav-mobile {
     display: none;
@@ -325,6 +328,7 @@ body {
 }
 
 .nav-mobile__wrap {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -499,6 +503,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .hero {
+    max-width: 1200px;
     padding: 200px 0;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_desktop.jpg);
   }
