@@ -24,7 +24,7 @@
 .contacts__link {
   display: flex;
   align-items: center;
-  font-weight: 500;
+  font-size: 3vw;
   letter-spacing: 0.02em;
   color: $secondary-text-color;
   transition: color $timing-function;
@@ -46,7 +46,8 @@
 }
 
 .contacts__link--mobile {
-  font-size: 26px;
+  font-size: 7vw;
+  font-weight: 500;
   line-height: 1.18;
   color: $accent-color;
   @media screen and (min-width: 480px) {
@@ -55,7 +56,7 @@
 }
 
 .contacts__link--mail {
-  font-size: 22px;
+  font-size: 5vw;
   line-height: 1.17;
   @media screen and (min-width: 480px) {
     font-size: 24px;
