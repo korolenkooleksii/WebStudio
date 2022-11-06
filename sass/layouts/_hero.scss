@@ -21,7 +21,7 @@ $hero-bgr-gradient: linear-gradient(
     background-image: $hero-bgr-gradient, url(../images/hero_mobile_2x.jpg);
   }
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 481px) {
     background-image: $hero-bgr-gradient, url(../images/hero_tablet.jpg);
 
     @media (min-device-pixel-ratio: 2),

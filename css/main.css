@@ -196,9 +196,6 @@ body {
   border: 0;
   background-color: transparent;
 }
-.menu-toggle:focus .icon-menu, .menu-toggle:focus .icon-close {
-  fill: #2196f3;
-}
 
 .icon-close,
 .icon-menu {
@@ -503,12 +500,12 @@ body {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_mobile_2x.jpg);
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 481px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_tablet.jpg);
   }
 }
-@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_tablet_2x.jpg);
   }
@@ -664,9 +661,6 @@ body {
 
 .button-close__icon {
   fill: currentColor;
-}
-.modal__button:hover .button-close__icon, .modal__button:focus .button-close__icon {
-  color: #2196f3;
 }
 
 .modal__title {
