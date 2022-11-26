@@ -4,3 +4,7 @@ body {
   background-color: $primary-white-color;
   color: $primary-text-color;
 }
+
+.no-scroll {
+  overflow: hidden;
+}

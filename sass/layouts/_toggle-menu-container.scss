@@ -1,7 +1,7 @@
 .toggle-container {
+  position: relative;
   width: auto;
   height: 60px;
-  position: relative;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -17,10 +17,10 @@
   justify-content: center;
   border: 0;
   background-color: transparent;
-  // &:focus .icon-menu,
-  // &:focus .icon-close {
-  //   fill: $accent-color;
-  // }
+  &:focus .icon-menu,
+  &:focus .icon-close {
+    fill: $accent-color;
+  }
 }
 
 .icon-close,

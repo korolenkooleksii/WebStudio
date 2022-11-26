@@ -49,6 +49,10 @@ body {
   color: #212121;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 @media screen and (max-width: 767px) {
   .header {
     position: relative;
@@ -97,11 +101,6 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .navigation {
-    margin-bottom: 50px;
-  }
-}
 @media screen and (min-width: 768px) {
   .navigation {
     display: flex;
@@ -176,9 +175,9 @@ body {
 }
 
 .toggle-container {
+  position: relative;
   width: auto;
   height: 60px;
-  position: relative;
 }
 @media screen and (min-width: 768px) {
   .toggle-container {
@@ -195,6 +194,9 @@ body {
   justify-content: center;
   border: 0;
   background-color: transparent;
+}
+.menu-toggle:focus .icon-menu, .menu-toggle:focus .icon-close {
+  fill: #2196f3;
 }
 
 .icon-close,
@@ -336,6 +338,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
   overflow: auto;
+}
+
+.nav-mobile__top {
+  margin-bottom: 50px;
 }
 
 .social-list {
@@ -587,18 +593,17 @@ body {
   padding: 40px;
 }
 
-@media screen and (max-width: 479px) {
-  .modal {
-    position: relative;
-    transform: scale(1);
-    transition: transform 500ms ease-in-out;
-    max-width: 450px;
-    max-height: 609px;
-  }
-  .backdrop.is-hidden .modal {
-    transform: scale(1.2);
-  }
+.modal {
+  position: relative;
+  transform: scale(1);
+  transition: transform 500ms ease-in-out;
+  max-width: 450px;
+  max-height: 609px;
 }
+.backdrop.is-hidden .modal {
+  transform: scale(1.2);
+}
+
 @media screen and (min-width: 480px) {
   .modal {
     position: absolute;
@@ -607,7 +612,7 @@ body {
     transform: translateX(-50%) scale(1);
     transition: transform 500ms ease-in-out;
     width: 450px;
-    max-height: 609px;
+    height: auto;
   }
   .backdrop.is-hidden .modal {
     transform: translateX(-50%) scale(1.2);
@@ -621,7 +626,6 @@ body {
     transform: translateX(-50%) scale(1);
     transition: transform 500ms ease-in-out;
     width: 450px;
-    max-height: 609px;
   }
   .backdrop.is-hidden .modal {
     transform: translateX(-50%) scale(1.2);
@@ -635,7 +639,6 @@ body {
     transform: translate(-50%, -50%) scale(1);
     transition: transform 500ms ease-in-out;
     width: 528px;
-    max-height: 581px;
   }
   .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(1.2);
@@ -661,6 +664,9 @@ body {
 
 .button-close__icon {
   fill: currentColor;
+}
+.modal__button:hover .button-close__icon, .modal__button:focus .button-close__icon {
+  color: #2196f3;
 }
 
 .modal__title {
@@ -1256,7 +1262,6 @@ body {
 }
 @media screen and (min-width: 768px) {
   .filters-list {
-    max-width: 576px;
     justify-content: center;
     margin-bottom: 30px;
     margin-right: auto;
